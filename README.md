@@ -42,8 +42,8 @@ Bonsai can be easily used through the Huggingface Transformers library. However,
 ```{python}
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-tokenizer = AutoTokenizer.from_pretrained("hespere-ai/Bonsai", trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained("hespere-ai/Bonsai", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained("deepgrove/Bonsai", trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained("deepgrove/Bonsai", trust_remote_code=True)
 text = "What is the capital of France?"
 inputs = tokenizer(text, return_tensors="pt")
 outputs = model.generate(**inputs, max_length=100)
